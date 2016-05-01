@@ -35,7 +35,7 @@ module Rchp
           issue.ticket_resolve_time
         elsif column.name.eql?(:last_message_date) && issue.is_a?(Issue)
           issue.helpdesk_ticket ? l(:label_helpdesk_ago, time_tag(issue.helpdesk_ticket.last_message_date)) : ""
-        elsif column.name.eql?(:helpdesk_ticket) && issue.customer && issue.is_a?(Issue)
+        elsif column.name.eql?(:helpdesk_ticket) && issue.helpdesk_ticket && issue.customer && issue.is_a?(Issue)
           contact_tag(issue.customer, :size => "32", :type => "avatar", :class => "avatar") +
               content_tag(:div,
                           content_tag(:p, link_to(issue.subject, issue_path(issue)), :class => 'ticket-name') +
