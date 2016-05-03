@@ -1,3 +1,9 @@
 = redmine_contacts_helpdesk_patch
 
-Description goes here
+Pivot and Custom reports will not work with the Redminecrm plugin so this patch was created to get it to work
+
+simply put into your redmine plugins directory (best to do a git clonw)
+
+follow the redmine install steps
+
+restart
